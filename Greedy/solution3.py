@@ -19,7 +19,7 @@ number	        k	return
 "4177252841"	4	"775841"
 '''
 def solution(number, k):
-    stack = [number[0]]
+    stack = [number[0]] # 스택을 사용하는 알고리즘 O(n+k)
     for num in number[1:]:
         while len(stack) > 0 and k > 0 and stack[-1] < num:
             stack.pop()
@@ -30,7 +30,7 @@ def solution(number, k):
     return "".join(stack)
     
     '''
-    i = 0
+    i = 0 # 문자열 슬라이싱을 사용하는 알고리즘 O(n^2)
     while k > 0 and i < len(number) - 1:
         next_i = i+1
         if number[i] < number[next_i]:
