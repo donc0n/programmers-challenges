@@ -20,7 +20,7 @@ n	costs	                                    return
 4	[[0,1,1],[0,2,2],[1,2,5],[1,3,1],[2,3,8]]	4
 '''
 def solution(n, costs):
-    # 크루스칼 알고리즘 O(len(costs)+n^2)
+    # 크루스칼 알고리즘 O(clog(c)+n^2) c ~ n^2
     answer = 0
     count = 0
     edges = sorted([(edge[2], edge[0], edge[1]) for edge in costs])
@@ -40,7 +40,7 @@ def solution(n, costs):
         
     '''
     answer = 0
-    for i in range(1, n): # O(n*len(costs))
+    for i in range(1, n): # O(n*c)
         cost_min = 1000000 #inf
         for edge in costs: # 0번 섬에서 가장 비용이 작은 다리를 가진 섬 선택
             if 0 in edge[:2] and edge[0] != edge[1] and cost_min > edge[2]:
