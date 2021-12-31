@@ -18,8 +18,8 @@ number는 1 이상 32,000 이하입니다.
 
 입출력 예
 N	number	return
-5	12	4
-2	11	3
+5	    12	     4
+2	    11	     3
 """
 def operation(A, B):
     # 사칙연산 + - * /
