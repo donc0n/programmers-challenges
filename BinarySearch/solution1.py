@@ -20,7 +20,7 @@ n명이 입국심사를 위해 줄을 서서 기다리고 있습니다. 각 입�
 n	times	    return
 6	[7, 10]	    28
 '''
-def solution(n, times): # O(NlogN) N = times.size()
+def solution(n, times): # O(TlogT + log(n*min(times))) T = times.size()
     low = 0
     high = n*min(times)
     while low < high: # 이분 탐색으로 "걸리는 시간"의 범위를 찾는 루프
