@@ -1,3 +1,3 @@
 # programmers-challenges
-python 수련 !
+python 알고리즘 수련 !
 https://programmers.co.kr/learn/challenges
